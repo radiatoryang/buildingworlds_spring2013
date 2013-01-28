@@ -10,4 +10,4 @@ Spring 2013 focuses on using Unity3D. Future semesters may use Polycode instead.
 - STUDENTS: click the Wiki tab on the project menu bar.
 
 - Each folder, in the root, is a separate project folder for Unity.
-- Code and assets, if applicable, are licensed under [the MIT License]http://opensource.org/licenses/MIT.
+- Code and assets, if applicable, are licensed under the MIT License (http://opensource.org/licenses/MIT)
