@@ -1,0 +1,5 @@
+*.csproj
+*.pidb
+buildingworlds_week4/Library/
+buildingworlds_week4/Temp/
+*.sln

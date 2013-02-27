@@ -1,8 +1,10 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\CameraBounce.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\CubeMove.cs">
     <Files>
-      <File FileName="Assets\scripts\CameraBounce.cs" Line="18" Column="3" />
+      <File FileName="Assets\scripts\CameraBounce.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\ThingBounce.cs" Line="10" Column="17" />
+      <File FileName="Assets\scripts\CubeMove.cs" Line="25" Column="37" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
