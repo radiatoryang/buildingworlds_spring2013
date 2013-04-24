@@ -602,7 +602,7 @@ BoxCollider:
   m_GameObject: {fileID: 1990895058}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -691,8 +691,8 @@ GameObject:
   - 136: {fileID: 2022569932}
   - 23: {fileID: 2022569931}
   - 114: {fileID: 2022569935}
-  m_Layer: 2
-  m_Name: CapsuleController5
+  m_Layer: 0
+  m_Name: CapsuleController2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -742,8 +742,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2022569930}
-  m_LocalRotation: {x: 0, y: -.681378722, z: 0, w: .731931031}
-  m_LocalPosition: {x: 0, y: 5.58216333, z: -3.07897377}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 4.57761288, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1990895059}
@@ -756,8 +756,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2022569930}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b581d546de3a6984fbfdd7ae745b0b53, type: 3}
+  m_Script: {fileID: 11500000, guid: 809a0ca272d86c54aba298cc11d152ac, type: 3}
   m_Name: 
   moveSpeed: 5
-  turnRate: 150
-  jumpPower: 3
+  turnRate: 180
