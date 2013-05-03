@@ -42,5 +42,6 @@ public class Fish : MonoBehaviour {
 
     void SetNewDestination(Vector3 newDestination) {
         destination = newDestination;
+	
     }
 }

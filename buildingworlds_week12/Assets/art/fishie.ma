@@ -1,6 +1,6 @@
 //Maya ASCII 2012 scene
 //Name: fishie.ma
-//Last modified: Mon, Apr 29, 2013 02:30:26 PM
+//Last modified: Thu, May 02, 2013 06:50:34 PM
 //Codeset: 1252
 requires maya "2012";
 currentUnit -l centimeter -a degree -t film;
@@ -12,12 +12,12 @@ fileInfo "osv" "Microsoft Windows 7 Home Premium Edition, 64-bit Windows 7 Servi
 fileInfo "license" "student";
 createNode transform -s -n "persp";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 20.622820915801526 19.340179333439561 -5.0151398301598284 ;
-	setAttr ".r" -type "double3" -28.471881497363086 38.199999999994859 -4.0472441090535775e-015 ;
+	setAttr ".t" -type "double3" 40.095700070953306 15.691792696813089 -17.269664492819661 ;
+	setAttr ".r" -type "double3" -18.871881497334094 70.5999999999962 4.7876683575616233e-015 ;
 createNode camera -s -n "perspShape" -p "persp";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999986;
-	setAttr ".coi" 38.272070141528971;
+	setAttr ".coi" 45.128519069354027;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -68,6 +68,17 @@ createNode transform -n "pCube1";
 	setAttr ".s" -type "double3" 0.76510768746235447 1 1 ;
 createNode mesh -n "pCubeShape1" -p "pCube1";
 	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.49999994039535522 0.49999998509883881 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode mesh -n "polySurfaceShape1" -p "pCube1";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
 	setAttr ".pv" -type "double2" 0.54817232743369237 0.64601600170135498 ;
@@ -470,6 +481,35 @@ createNode place2dTexture -n "place2dTexture2";
 createNode file -n "file3";
 	setAttr ".ftn" -type "string" "C:/Users/Robert/Desktop/buildingworlds/buildingworlds_week12/Assets/art/fish_uv_template.psd";
 createNode place2dTexture -n "place2dTexture3";
+createNode polyPlanarProj -n "polyPlanarProj1";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:101]";
+	setAttr ".ix" -type "matrix" 0.76510768746235447 0 0 0 0 1 0 0 0 0 1 0 -0.18235971655872474 1.6841795181085777 -31.103386984324906 1;
+	setAttr ".ws" yes;
+	setAttr ".pc" -type "double3" -0.18235969543457031 1.0948343276977539 -31.45380973815918 ;
+	setAttr ".ro" -type "double3" 0 90 0 ;
+	setAttr ".ps" -type "double2" 21.293666839599609 10.53607177734375 ;
+	setAttr ".cam" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+createNode polyTweakUV -n "polyTweakUV1";
+	setAttr ".uopa" yes;
+	setAttr -s 104 ".uvtk[0:103]" -type "float2" 0 0.031471938 0 0.031471938
+		 0 -0.039199114 0 -0.039199114 0 -0.077314854 0 -0.077314854 0 -0.12228429 0 -0.12228429
+		 0 -0.16169345 0 -0.16169345 0 -0.18568164 0 -0.18568164 0 -0.20281601 0 -0.20281601
+		 0 -0.26107305 0 -0.26107305 0 -0.28334779 0 -0.28334779 0 -0.24393868 0 -0.24393868
+		 0 -0.17540097 0 -0.17540097 0 -0.17197406 0 -0.17197406 0 -0.10364681 0 -0.10364681
+		 0 -0.0031387806 0 -0.0031387806 0 0.012724519 0 0.012724519 0 -0.0025166273 0 -0.0025166273
+		 0 0.077408195 0 0.077408195 0 0.15733337 0 0.15733337 0 0.2372582 0 0.2372582 0 0.20002323
+		 0 0.20002323 0 0.19504446 0 0.19504446 0 0.279921 0 0.279921 0 0.28334782 0 0.28334782
+		 0 0.25536245 0 0.25536245 0 0.23970833 0 0.23970833 0 0.18111169 0 0.18111169 0 0.23708493
+		 0 0.23708493 0 0.23708493 0 0.23708493 0 0.13941878 0 0.13941878 0 0.10172307 0 0.10172307
+		 0 0.14111102 0 0.13697946 0 0.11843753 0 0.10644341 0 0.068747699 0 0.055040151 0
+		 0.055040151 0 0.048186421 0 0.037905753 0 0.031052023 0 0.031052023 0 0.061829597
+		 0 0.032651335 0 -0.0070637465 0 -0.019057751 0 -0.056753576 0 -0.070461035 0 -0.070461035
+		 0 -0.077314854 0 -0.087595522 0 -0.094449162 0 -0.094449162 0 0.13697946 0 0.14111102
+		 0 0.11843753 0 0.10644341 0 0.068747699 0 0.055040151 0 0.055040151 0 0.048186421
+		 0 0.037905753 0 0.031052023 0 0.031052023 0 0.032651335 0 0.061829597 0 -0.0070637465
+		 0 -0.019057751 0 -0.056753576 0 -0.070461035 0 -0.070461035 0 -0.077314854 0 -0.087595522
+		 0 -0.094449162 0 -0.094449162;
 select -ne :time1;
 	setAttr ".o" 1;
 	setAttr ".unw" 1;
@@ -498,7 +538,11 @@ select -ne :hardwareRenderGlobals;
 select -ne :defaultHardwareRenderGlobals;
 	setAttr ".fn" -type "string" "im";
 	setAttr ".res" -type "string" "ntsc_4d 646 485 1.333";
+select -ne :ikSystem;
+	setAttr -s 4 ".sol";
 connectAttr "imagePlane1.msg" ":sideShape.ip" -na;
+connectAttr "polyTweakUV1.out" "pCubeShape1.i";
+connectAttr "polyTweakUV1.uvtk[0]" "pCubeShape1.uvst[0].uvtw";
 connectAttr "polyCube2.out" "pCubeShape2.i";
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
@@ -560,6 +604,9 @@ connectAttr "place2dTexture3.vt3" "file3.vt3";
 connectAttr "place2dTexture3.vc1" "file3.vc1";
 connectAttr "place2dTexture3.o" "file3.uv";
 connectAttr "place2dTexture3.ofs" "file3.fs";
+connectAttr "polySurfaceShape1.o" "polyPlanarProj1.ip";
+connectAttr "pCubeShape1.wm" "polyPlanarProj1.mp";
+connectAttr "polyPlanarProj1.out" "polyTweakUV1.ip";
 connectAttr "pCubeShape1.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "pCubeShape2.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "file1.msg" ":defaultTextureList1.tx" -na;
